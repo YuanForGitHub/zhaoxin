@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- 设置图标 -->
+    <link href="img/logo_icon.png" rel="icon" type="image/x-icon">
+    <!-- 引入样式表 -->
+    <link href="bootstrap/css/bootstrap.min.css" type="text/css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap-responsive.css">
+    <title>招新报名</title>
+    <style>
+        body {
+            background-image: url('img/logo.jpg');
+            background-repeat: no-repeat;
+            background-position: bottom;
+            overflow-x: hidden;
+        }
+        
+        @media screen and (max-width: 480px) {
+            .container {
+                border: 1px solid white;
+                margin-top: 1%;
+                padding-top: 2%;
+            }
+        }
+        
+        @media screen and (min-width: 480px) {
+            .container {
+                border: 1px solid white;
+                box-shadow: 0px 0px 70px 3px lightgray;
+                margin-top: 1%;
+                padding-top: 2%;
+            }
+        }
+        
+        .content {
+            padding: 2%;
+        }
+        
+        label {
+            margin-left: 2%;
+        }
+        
+        textarea {
+            opacity: 0.5;
+        }
+        
+        .beizhu {
+            color: red;
+        }
+        
+        #submit {
+            width: 0%;
+            height: 0%;
+            opacity: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div>
+            <!-- 头部 -->
+            <div class="header text-center">
+                <h3>招新取号</h3>
+                <ol class="breadcrumb">
+                    <li>华南农业大学 <span>/</span></li>
+                    <li>数学与信息学院、软件学院 <span>/</span></li>
+                    <li>团委学生会</li>
+                </ol>
+            </div>
+
+            <!-- 表格 -->
+            <div class="content row-fluid">
+                <div class="span4"></div>
+                <form class="form-inline span4" action="baoming.php" method="POST">
+                    <div>
+                        <label>姓名：</label>
+                        <input type="text" name="name" placeholder="name"><br><br>
+                        <label>专业：</label>
+                        <select name="zy">
+                                    <option value="">请选择</option>
+                                    <option value="软件工程(温氏阿里创新班)">软件工程(温氏阿里创新班)</option>
+                                    <option value="计算机科学与技术1班">计算机科学与技术1班</option>
+                                    <option value="计算机科学与技术2班">计算机科学与技术2班</option>
+                                    <option value="计算机科学与技术3班">计算机科学与技术3班</option>
+                                    <option value="计算机科学与技术4班">计算机科学与技术4班</option>
+                                    <option value="计算机科学与技术5班">计算机科学与技术5班</option>
+                                    <option value="计算机科学与技术6班">计算机科学与技术6班</option>
+                                    <option value="软件工程1班">软件工程1班</option>
+                                    <option value="软件工程2班">软件工程2班</option>
+                                    <option value="软件工程3班">软件工程3班</option>
+                                    <option value="软件工程4班">软件工程4班</option>
+                                    <option value="软件工程5班">软件工程5班</option>
+                                    <option value="软件工程6班">软件工程6班</option>
+                                    <option value="信息管理与信息系统1班">信息管理与信息系统1班</option>
+                                    <option value="信息管理与信息系统2班">信息管理与信息系统2班</option>
+                                    <option value="信息管理与信息系统3班">信息管理与信息系统3班</option>
+                                    <option value="信息管理与信息系统4班">信息管理与信息系统4班</option>
+                                    <option value="网络工程1班">网络工程1班</option>
+                                    <option value="网络工程2班">网络工程2班</option>
+                                    <option value="信息与计算科学1班">信息与计算科学1班</option>
+                                    <option value="信息与计算科学2班">信息与计算科学2班</option>
+                                    <option value="信息与计算科学3班">信息与计算科学3班</option>
+                                    <option value="信息与计算科学4班">信息与计算科学4班</option>
+                                    <option value="数学与应用数学1班">数学与应用数学1班</option>
+                                    <option value="数学与应用数学2班">数学与应用数学2班</option>
+                                    <option value="统计学1班">统计学1班</option>
+                                    <option value="统计学2班">统计学2班</option>
+                                    <option value="工业工程1班">工业工程1班</option>
+                                    <option value="工业工程2班">工业工程2班</option>
+                            </select><br><br>
+                        <label>学号：</label>
+                        <input type="number" name="xh" min="0" placeholder="Student No."><br>
+                    </div>
+                    <br>
+                    <div>
+                        <label>手机： </label>
+                        <input type="number" name="lianxi_c" min="0" placeholder="phone number"><br><br>
+                        <label>
+                            <input type="radio" name="xb" value="男" checked>男
+                    </label>
+                        <label>
+                        <input type="radio" name="xb" value="女">女
+                    </label><br><br>
+                    </div>
+                    <br>
+
+                    <!-- 备注 -->
+                    <div class="beizhu">
+                        <label>备注*：此信息录入与面试通知相关，请如实、规范填写完整，并确认正确性！</label>
+                    </div>
+                    <br>
+                    <div class="text-center row-fluid">
+                        <div class="span1"></div>
+                        <button type="button" class="btn btn-success btn-large span8" value="submit">提交</button>
+                        <input type="submit" id="submit" value="submit">
+                    </div>
+                </form>
+
+                <div class="span4"></div>
+            </div>
+
+            <!-- 尾部 -->
+            <hr>
+            <div class="text-center">
+                <p>Copyright © SCAU MIS'S</p>
+                <p>Powerd By NetMan</p>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="jquery-3.2.1/jquery-3.2.1.js"></script>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+
+    <script>
+        $(function() {
+            //点击按钮检查表单
+            $("button").click(function() {
+                var kong = 0;
+                var len = $("form :input").length;
+                var obj = $("form :input");
+                for (var i = 0; i < len; i++) {
+                    if (obj.eq(i).val() == '') {
+                        kong++;
+                    }
+                }
+                if (kong > 0) {
+                    alert('请填写完整表格在提交');
+                } else {
+                    alert('提交成功！');
+                    $("#submit").trigger("click");
+                }
+            })
+        })
+    </script>
+
+</body>
+
+</html>
